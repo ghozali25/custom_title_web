@@ -1,4 +1,4 @@
-odoo.define('web_window_title', function (require) {
+odoo.define('custom_title_web', function (require) {
 "use strict";
 
 var AbstractWebClient = require('web.AbstractWebClient');

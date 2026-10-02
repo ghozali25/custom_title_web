@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" inherit_id="web.assets_backend" name="custom_title_web assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/custom_title_web/static/src/js/web_window_title.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
