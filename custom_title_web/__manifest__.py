@@ -15,7 +15,7 @@
         'views/res_config.xml',
     ],
     'images': [
-        'static/description/view_title.png',
+        'static/description/main_screenshot.png',
     ],
     'installable': True,
     'auto_install': False,
