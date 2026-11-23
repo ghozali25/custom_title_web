@@ -15,6 +15,7 @@
         'views/res_config.xml',
     ],
     'images': [
+        'static/description/Web_Window_Title_Video.gif',
         'static/description/main_screenshot.png',
     ],
     'installable': True,
