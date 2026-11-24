@@ -15,7 +15,7 @@ Changelog
 """,
     'author': 'Ahmad Ghozali',
     'category': 'Extra Tools',
-    'version': '14.0.1.2.1',
+    'version': '14.0.1.2.2',
     'depends': ['base_setup'],
     'demo': [
         'data/demo.xml',
