@@ -1,21 +1,144 @@
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span12">
-            <h2 class="oe_slogan">Web Window Title</h2>
-            <h3 class="oe_slogan">The custom web window title</h3>
-        </div>
-        <div class="oe_span12">
-            <div class="oe_demo oe_picture oe_screenshot" style="max-height:none">
-                <img src="view_title.png"/>
-            </div>
-        </div>
+<style>
+#lang-en:checked ~ .lang-en { display: block !important; }
+#lang-en:checked ~ .lang-id { display: none !important; }
+#lang-id:checked ~ .lang-en { display: none !important; }
+#lang-id:checked ~ .lang-id { display: block !important; }
+#lang-en:checked ~ .lang-switch label[for="lang-en"] { background: #6D28D9 !important; color: #ffffff !important; border-color: #6D28D9 !important; }
+#lang-id:checked ~ .lang-switch label[for="lang-id"] { background: #6D28D9 !important; color: #ffffff !important; border-color: #6D28D9 !important; }
+</style>
+<div>
+<input type="radio" name="wwt-lang" id="lang-en" checked="checked" style="display:none;" />
+<input type="radio" name="wwt-lang" id="lang-id" style="display:none;" />
+<div class="lang-switch" style="position:sticky;top:0;z-index:50;background:#ffffff;border:1px solid #e5e0f0;border-radius:12px;padding:10px 14px;margin-bottom:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;">
+<span style="font-size:13px;font-weight:800;color:#6D28D9;letter-spacing:1px;">LANGUAGE / BAHASA:</span>
+<label for="lang-en" style="cursor:pointer;background:#f6f4fb;color:#6D28D9;border:1px solid #cbbfe0;border-radius:20px;padding:6px 18px;font-size:14px;font-weight:700;">English</label>
+<label for="lang-id" style="cursor:pointer;background:#f6f4fb;color:#6D28D9;border:1px solid #cbbfe0;border-radius:20px;padding:6px 18px;font-size:14px;font-weight:700;">Bahasa Indonesia</label>
+<span style="font-size:12px;color:#6b7280;">English is the default. / Bahasa Inggris adalah default.</span>
+</div>
+<div class="lang-en">
+<div style="font-family:Arial,Helvetica,sans-serif;color:#1f2937;line-height:1.6;max-width:980px;margin:0 auto;font-size:15px;">
+<div style="background:linear-gradient(135deg,#6D28D9 0%,#3B0764 100%);border-radius:18px;padding:38px 34px 30px 34px;color:#ffffff;">
+  <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;">
+    <div style="background:#6D28D9;border-radius:26px;width:112px;height:112px;min-width:112px;display:flex;align-items:center;justify-content:center;font-size:54px;font-weight:800;color:#ffffff;">WT</div>
+    <div style="flex:1;min-width:260px;">
+      <div style="font-size:42px;font-weight:800;line-height:1.1;">Web Window Title</div>
+      <div style="font-size:17px;color:#f3eefc;margin-top:8px;">Give your Odoo a name — the browser tab and the login page show your custom window title.</div>
+      <div style="margin-top:14px;">
+        <span style="display:inline-block;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);border-radius:20px;padding:4px 14px;font-size:13px;margin:0 6px 6px 0;">Odoo 14</span>
+        <span style="display:inline-block;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);border-radius:20px;padding:4px 14px;font-size:13px;margin:0 6px 6px 0;">LGPL-3</span>
+        <span style="display:inline-block;background:#6D28D9;border-radius:20px;padding:4px 14px;font-size:13px;margin:0 6px 6px 0;">FREE</span>
+      </div>
     </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span12">
-            <h3 class="oe_slogan">Support</h3>
-            <p class="text-center">Ahmad Ghozali</p>
-        </div>
+  </div>
+  <div style="margin-top:26px;">
+    <img src="Web_Window_Title_Video.gif" alt="Web Window Title" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,0.25);display:block;" />
+  </div>
+  <p style="margin:22px 0 0 0;font-size:16px;color:#f3eefc;">The custom web window title. One <strong>Title</strong> field in General Settings replaces the generic browser tab text with your own name — on the login page and on every backend tab. No code edits, no restart: type it, save it, reload the page.</p>
+  <ul style="margin:18px 0 0 0;padding-left:22px;font-size:15px;color:#ffffff;line-height:1.9;">
+    <li>✔ <strong>One Title field</strong> in Settings &rarr; General Settings &rarr; Window.</li>
+    <li>✔ <strong>Applies to the login page</strong> and to every backend browser tab.</li>
+    <li>✔ <strong>No code edits</strong> — the value is stored in the <code>web.base.title</code> system parameter.</li>
+    <li>✔ <strong>Demo value included</strong> — the module ships with the title “Demo” so you can see it working right away.</li>
+    <li>✔ <strong>Works for every tab</strong> of the database — each database keeps its own title.</li>
+  </ul>
+</div>
+<div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;"><div style="flex:1;min-width:150px;background:#f6f4fb;border:1px solid #e5e0f0;border-radius:12px;padding:16px 14px;text-align:center;">
+      <div style="font-size:30px;font-weight:800;color:#6D28D9;">1</div>
+      <div style="font-size:13px;color:#4b5563;margin-top:4px;">setting field<br />Title, in General Settings</div>
+    </div><div style="flex:1;min-width:150px;background:#f6f4fb;border:1px solid #e5e0f0;border-radius:12px;padding:16px 14px;text-align:center;">
+      <div style="font-size:30px;font-weight:800;color:#6D28D9;">2</div>
+      <div style="font-size:13px;color:#4b5563;margin-top:4px;">surfaces branded<br />login page + web client tabs</div>
+    </div><div style="flex:1;min-width:150px;background:#f6f4fb;border:1px solid #e5e0f0;border-radius:12px;padding:16px 14px;text-align:center;">
+      <div style="font-size:30px;font-weight:800;color:#6D28D9;">0</div>
+      <div style="font-size:13px;color:#4b5563;margin-top:4px;">code edits needed<br />settings only, save and reload</div>
+    </div></div><h2 id="how-it-works" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">How It Works</h2><p style="margin:0 0 12px 0;">The module stores your title in the <code>web.base.title</code> system parameter (Settings &rarr; General Settings &rarr; <strong>Window</strong> &rarr; <strong>Title</strong>). The login page (<code>web.login</code>) and the web client bootstrap (<code>web.webclient_bootstrap</code>) render that value as the page title, and the web client keeps it as the browser tab title.</p><p style="margin:0 0 12px 0;">Install the module and the demo value <strong>“Demo”</strong> is already active — open any page and the browser tab shows your custom title instead of the generic one. On the test database the tab reads exactly <strong>“Demo”</strong> on the Settings page and on the Apps page (verified in the screenshots below).</p><p style="margin:0 0 12px 0;">Change it any time: type a new title, click <strong>Save</strong>, reload the page. Clear the field and save to go back to the default.</p><p style="margin:0 0 18px 0;"><img src="screenshot-title-tab.png" alt="Browser tab showing the custom title “Demo” on the Settings page (test database)." style="width:100%;border:1px solid #ddd;border-radius:8px;display:block;" /><span style="font-size:13px;color:#6b7280;">Browser tab showing the custom title “Demo” on the Settings page (test database).</span></p><h2 id="compatible" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Compatible</h2><p style="color:#6b7280;margin:0 0 18px 0;">Odoo 14.0 only. One title per database.</p><table style="width:100%;border-collapse:collapse;font-size:14px;"><tr style="background:#6D28D9;color:#ffffff;">
+    <th style="text-align:left;padding:10px 14px;border:1px solid #6D28D9;">Module</th>
+    <th style="text-align:left;padding:10px 14px;border:1px solid #6D28D9;">Status</th>
+  </tr><tr>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Odoo 14.0</td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Required — this build is for 14.0 only</td>
+  </tr><tr style="background:#f6f4fb;">
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;"><code>base_setup</code></td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Required — the only dependency</td>
+  </tr></table><div style="display:flex;gap:28px;align-items:flex-start;margin-top:36px;"><div style="flex:0 0 208px;position:sticky;top:16px;background:#f6f4fb;border:1px solid #e5e0f0;border-radius:12px;padding:16px 14px;">
+    <div style="font-weight:800;color:#6D28D9;font-size:13px;letter-spacing:1px;margin-bottom:10px;">CONTENTS</div><a href="#screenshots" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">🖼️ Screenshots</a><a href="#user-guide" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">📖 User Guide</a><a href="#business-cases" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">💼 Business Cases</a><a href="#installation" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">⚙️ Installation</a><a href="#faq-en" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">❓ FAQ</a><a href="#not-in-build" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">📝 Not in this build</a><a href="#changelog-en" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">📝 Changelog</a><a href="#support" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">📧 Support</a><div style="margin-top:14px;padding-top:12px;border-top:1px solid #e5e0f0;font-size:13px;color:#6b7280;">
+      <div>Version: <strong>14.0.1.2.1</strong></div>
+      <div style="margin-top:4px;">Odoo 14.0</div>
     </div>
-</section>
+  </div><div style="flex:1;min-width:0;"><h2 id="screenshots" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Screenshots</h2><p style="margin:0 0 18px 0;"><img src="screenshot-title-tab.png" alt="Browser tab showing the custom title “Demo” — Settings page (test database)." style="width:100%;border:1px solid #ddd;border-radius:8px;display:block;" /><span style="font-size:13px;color:#6b7280;">Browser tab showing the custom title “Demo” — Settings page (test database).</span></p><p style="margin:0 0 18px 0;"><img src="screenshot-title-apps.png" alt="Browser tab showing the custom title “Demo” — Apps page (test database)." style="width:100%;border:1px solid #ddd;border-radius:8px;display:block;" /><span style="font-size:13px;color:#6b7280;">Browser tab showing the custom title “Demo” — Apps page (test database).</span></p><p style="margin:0 0 18px 0;"><img src="screenshot-settings.png" alt="Settings — General Settings — Window section with the Title field (test database)." style="width:100%;border:1px solid #ddd;border-radius:8px;display:block;" /><span style="font-size:13px;color:#6b7280;">Settings — General Settings — Window section with the Title field (test database).</span></p><h2 id="user-guide" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">User Guide</h2><ol style="margin:0 0 12px 0;padding-left:22px;line-height:1.9;"><li style="margin-bottom:8px;">Install the module (Apps &rarr; Update Apps List &rarr; Install). The demo title “Demo” is active immediately.</li><li style="margin-bottom:8px;">Open <strong>Settings &rarr; General Settings</strong> and find the <strong>Window</strong> section.</li><li style="margin-bottom:8px;">Type your title in the <strong>Title</strong> field (for example your company name).</li><li style="margin-bottom:8px;">Click <strong>Save</strong>, then reload the page — the browser tab now shows your title.</li><li style="margin-bottom:8px;">To go back to the default, clear the Title field and click <strong>Save</strong>.</li></ol><h2 id="business-cases" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Business Cases</h2><table style="width:100%;border-collapse:collapse;font-size:14px;"><tr style="background:#6D28D9;color:#ffffff;">
+    <th style="text-align:left;padding:10px 14px;border:1px solid #6D28D9;">Situation</th>
+    <th style="text-align:left;padding:10px 14px;border:1px solid #6D28D9;">What you get</th>
+  </tr><tr>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Several Odoo databases open in several browser tabs</td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;"><strong>1 title per database</strong> — each tab is recognisable at a glance</td>
+  </tr><tr style="background:#f6f4fb;">
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Clients should see your brand, not a generic tab</td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Your own name on the <strong>login page</strong> and on every backend tab</td>
+  </tr><tr>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">You want to check that it works before configuring anything</td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Demo value <strong>“Demo”</strong> ships with the module and is active right after install</td>
+  </tr></table><h2 id="installation" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Installation</h2><ol style="margin:0 0 12px 0;padding-left:22px;line-height:1.9;"><li style="margin-bottom:8px;">Copy the <code>custom_title_web</code> folder into an addons path of your Odoo 14 installation.</li><li style="margin-bottom:8px;">Install with <code>odoo-bin -d &lt;db&gt; -i custom_title_web --stop-after-init</code>, or from Apps &rarr; Update Apps List &rarr; Install (the module is listed as <strong>Web Window Title</strong>).</li><li style="margin-bottom:8px;">No restart is needed — set the title in Settings and reload the page.</li></ol><h2 id="faq-en" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">FAQ</h2><p style="margin:0 0 14px 0;"><strong>Where is the setting?</strong><br />Settings &rarr; General Settings &rarr; <strong>Window</strong> section &rarr; <strong>Title</strong> field.</p><p style="margin:0 0 14px 0;"><strong>Does it need a server restart?</strong><br />No — save the setting and reload the browser page.</p><p style="margin:0 0 14px 0;"><strong>Does it change the logo or the colours?</strong><br />No — it only changes the browser tab / page title text.</p><p style="margin:0 0 14px 0;"><strong>Does it affect the login page?</strong><br />Yes — the login page title uses the same <code>web.base.title</code> value.</p><p style="margin:0 0 14px 0;"><strong>What happens if the Title field is empty?</strong><br />The default title is used.</p><h2 id="not-in-build" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Not in this build</h2><ul style="margin:0 0 12px 0;padding-left:22px;line-height:1.9;"><li style="margin-bottom:8px;">Title text only — no logo, favicon, or colour changes.</li><li style="margin-bottom:8px;">One title per database, not per user and not per app.</li><li style="margin-bottom:8px;">The module does not rename the database or the company.</li></ul><h2 id="changelog-en" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Changelog</h2><ul style="margin:0 0 12px 0;padding-left:22px;line-height:1.9;"><li style="margin-bottom:8px;"><strong>14.0.1.2.1 — 24 Nov 2026</strong> &mdash; New-style bilingual description (English default + Bahasa Indonesia) with sidebar navigation and testbed screenshots.</li></ul><h2 id="support" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Support</h2><p style="margin:0 0 12px 0;">Author: <strong>Ahmad Ghozali</strong> &middot; License: LGPL-3.</p></div></div></div></div>
+<div class="lang-id" style="display:none;">
+<div style="font-family:Arial,Helvetica,sans-serif;color:#1f2937;line-height:1.6;max-width:980px;margin:0 auto;font-size:15px;">
+<div style="background:linear-gradient(135deg,#6D28D9 0%,#3B0764 100%);border-radius:18px;padding:38px 34px 30px 34px;color:#ffffff;">
+  <div style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;">
+    <div style="background:#6D28D9;border-radius:26px;width:112px;height:112px;min-width:112px;display:flex;align-items:center;justify-content:center;font-size:54px;font-weight:800;color:#ffffff;">WT</div>
+    <div style="flex:1;min-width:260px;">
+      <div style="font-size:42px;font-weight:800;line-height:1.1;">Web Window Title</div>
+      <div style="font-size:17px;color:#f3eefc;margin-top:8px;">Beri nama pada Odoo Anda — tab browser dan halaman login menampilkan judul jendela kustom Anda.</div>
+      <div style="margin-top:14px;">
+        <span style="display:inline-block;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);border-radius:20px;padding:4px 14px;font-size:13px;margin:0 6px 6px 0;">Odoo 14</span>
+        <span style="display:inline-block;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);border-radius:20px;padding:4px 14px;font-size:13px;margin:0 6px 6px 0;">LGPL-3</span>
+        <span style="display:inline-block;background:#6D28D9;border-radius:20px;padding:4px 14px;font-size:13px;margin:0 6px 6px 0;">FREE</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:26px;">
+    <img src="Web_Window_Title_Video.gif" alt="Web Window Title" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,0.25);display:block;" />
+  </div>
+  <p style="margin:22px 0 0 0;font-size:16px;color:#f3eefc;">Judul jendela web kustom. Satu field <strong>Title</strong> di General Settings mengganti teks tab browser generik dengan nama Anda sendiri — di halaman login dan di setiap tab backend. Tanpa edit kode, tanpa restart: ketik, simpan, reload halaman.</p>
+  <ul style="margin:18px 0 0 0;padding-left:22px;font-size:15px;color:#ffffff;line-height:1.9;">
+    <li>✔ <strong>Satu field Title</strong> di Settings &rarr; General Settings &rarr; Window.</li>
+    <li>✔ <strong>Berlaku di halaman login</strong> dan di setiap tab browser backend.</li>
+    <li>✔ <strong>Tanpa edit kode</strong> — nilai tersimpan di system parameter <code>web.base.title</code>.</li>
+    <li>✔ <strong>Nilai demo disertakan</strong> — modul membawa judul “Demo” sehingga Anda langsung melihat cara kerjanya.</li>
+    <li>✔ <strong>Berlaku untuk semua tab</strong> database ini — tiap database punya judulnya sendiri.</li>
+  </ul>
+</div>
+<div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;"><div style="flex:1;min-width:150px;background:#f6f4fb;border:1px solid #e5e0f0;border-radius:12px;padding:16px 14px;text-align:center;">
+      <div style="font-size:30px;font-weight:800;color:#6D28D9;">1</div>
+      <div style="font-size:13px;color:#4b5563;margin-top:4px;">field pengaturan<br />Title, di General Settings</div>
+    </div><div style="flex:1;min-width:150px;background:#f6f4fb;border:1px solid #e5e0f0;border-radius:12px;padding:16px 14px;text-align:center;">
+      <div style="font-size:30px;font-weight:800;color:#6D28D9;">2</div>
+      <div style="font-size:13px;color:#4b5563;margin-top:4px;">permukaan yang di-branding<br />halaman login + tab web client</div>
+    </div><div style="flex:1;min-width:150px;background:#f6f4fb;border:1px solid #e5e0f0;border-radius:12px;padding:16px 14px;text-align:center;">
+      <div style="font-size:30px;font-weight:800;color:#6D28D9;">0</div>
+      <div style="font-size:13px;color:#4b5563;margin-top:4px;">edit kode dibutuhkan<br />hanya pengaturan, simpan dan reload</div>
+    </div></div><h2 id="how-it-works" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Cara Kerja</h2><p style="margin:0 0 12px 0;">Modul menyimpan judul Anda di system parameter <code>web.base.title</code> (Settings &rarr; General Settings &rarr; <strong>Window</strong> &rarr; <strong>Title</strong>). Halaman login (<code>web.login</code>) dan bootstrap web client (<code>web.webclient_bootstrap</code>) me-render nilai itu sebagai judul halaman, dan web client mempertahankannya sebagai judul tab browser.</p><p style="margin:0 0 12px 0;">Install modul dan nilai demo <strong>“Demo”</strong> langsung aktif — buka halaman mana pun dan tab browser menampilkan judul kustom Anda, bukan judul generik. Di database test, tab terbaca persis <strong>“Demo”</strong> di halaman Settings maupun di halaman Apps (terverifikasi di screenshot di bawah).</p><p style="margin:0 0 12px 0;">Ganti kapan saja: ketik judul baru, klik <strong>Save</strong>, reload halaman. Kosongkan field lalu simpan untuk kembali ke default.</p><p style="margin:0 0 18px 0;"><img src="screenshot-title-tab.png" alt="Tab browser menampilkan judul kustom “Demo” di halaman Settings (database test)." style="width:100%;border:1px solid #ddd;border-radius:8px;display:block;" /><span style="font-size:13px;color:#6b7280;">Tab browser menampilkan judul kustom “Demo” di halaman Settings (database test).</span></p><h2 id="compatible" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Kompatibilitas</h2><p style="color:#6b7280;margin:0 0 18px 0;">Hanya Odoo 14.0. Satu judul per database.</p><table style="width:100%;border-collapse:collapse;font-size:14px;"><tr style="background:#6D28D9;color:#ffffff;">
+    <th style="text-align:left;padding:10px 14px;border:1px solid #6D28D9;">Modul</th>
+    <th style="text-align:left;padding:10px 14px;border:1px solid #6D28D9;">Status</th>
+  </tr><tr>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Odoo 14.0</td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Wajib — build ini hanya untuk 14.0</td>
+  </tr><tr style="background:#f6f4fb;">
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;"><code>base_setup</code></td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Wajib — satu-satunya depends</td>
+  </tr></table><div style="display:flex;gap:28px;align-items:flex-start;margin-top:36px;"><div style="flex:0 0 208px;position:sticky;top:16px;background:#f6f4fb;border:1px solid #e5e0f0;border-radius:12px;padding:16px 14px;">
+    <div style="font-weight:800;color:#6D28D9;font-size:13px;letter-spacing:1px;margin-bottom:10px;">DAFTAR ISI</div><a href="#tangkapan-layar" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">🖼️ Tangkapan Layar</a><a href="#panduan" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">📖 Panduan Pengguna</a><a href="#studi-kasus" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">💼 Studi Kasus</a><a href="#instalasi" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">⚙️ Instalasi</a><a href="#faq-id" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">❓ FAQ</a><a href="#tidak-ada-di-build" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">📝 Tidak Ada di Build Ini</a><a href="#changelog-id" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">📝 Changelog</a><a href="#dukungan" style="display:block;padding:7px 10px;border-radius:8px;color:#6D28D9;text-decoration:none;font-weight:700;font-size:14px;">📧 Dukungan</a><div style="margin-top:14px;padding-top:12px;border-top:1px solid #e5e0f0;font-size:13px;color:#6b7280;">
+      <div>Version: <strong>14.0.1.2.1</strong></div>
+      <div style="margin-top:4px;">Odoo 14.0</div>
+    </div>
+  </div><div style="flex:1;min-width:0;"><h2 id="tangkapan-layar" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Tangkapan Layar</h2><p style="margin:0 0 18px 0;"><img src="screenshot-title-tab.png" alt="Tab browser menampilkan judul kustom “Demo” — halaman Settings (database test)." style="width:100%;border:1px solid #ddd;border-radius:8px;display:block;" /><span style="font-size:13px;color:#6b7280;">Tab browser menampilkan judul kustom “Demo” — halaman Settings (database test).</span></p><p style="margin:0 0 18px 0;"><img src="screenshot-title-apps.png" alt="Tab browser menampilkan judul kustom “Demo” — halaman Apps (database test)." style="width:100%;border:1px solid #ddd;border-radius:8px;display:block;" /><span style="font-size:13px;color:#6b7280;">Tab browser menampilkan judul kustom “Demo” — halaman Apps (database test).</span></p><p style="margin:0 0 18px 0;"><img src="screenshot-settings.png" alt="Settings — General Settings — seksi Window dengan field Title (database test)." style="width:100%;border:1px solid #ddd;border-radius:8px;display:block;" /><span style="font-size:13px;color:#6b7280;">Settings — General Settings — seksi Window dengan field Title (database test).</span></p><h2 id="panduan" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Panduan Pengguna</h2><ol style="margin:0 0 12px 0;padding-left:22px;line-height:1.9;"><li style="margin-bottom:8px;">Install modul (Apps &rarr; Update Apps List &rarr; Install). Judul demo “Demo” langsung aktif.</li><li style="margin-bottom:8px;">Buka <strong>Settings &rarr; General Settings</strong> dan cari seksi <strong>Window</strong>.</li><li style="margin-bottom:8px;">Ketik judul Anda di field <strong>Title</strong> (misalnya nama perusahaan Anda).</li><li style="margin-bottom:8px;">Klik <strong>Save</strong>, lalu reload halaman — tab browser kini menampilkan judul Anda.</li><li style="margin-bottom:8px;">Untuk kembali ke default, kosongkan field Title lalu klik <strong>Save</strong>.</li></ol><h2 id="studi-kasus" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Studi Kasus</h2><table style="width:100%;border-collapse:collapse;font-size:14px;"><tr style="background:#6D28D9;color:#ffffff;">
+    <th style="text-align:left;padding:10px 14px;border:1px solid #6D28D9;">Situasi</th>
+    <th style="text-align:left;padding:10px 14px;border:1px solid #6D28D9;">Yang Anda dapatkan</th>
+  </tr><tr>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Beberapa database Odoo terbuka di beberapa tab browser</td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;"><strong>1 judul per database</strong> — tiap tab langsung dikenali</td>
+  </tr><tr style="background:#f6f4fb;">
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Klien sebaiknya melihat brand Anda, bukan tab generik</td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Nama Anda sendiri di <strong>halaman login</strong> dan di setiap tab backend</td>
+  </tr><tr>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Anda ingin memastikan cara kerjanya sebelum mengonfigurasi apa pun</td>
+    <td style="padding:10px 14px;border:1px solid #e5e0f0;">Nilai demo <strong>“Demo”</strong> sudah disertakan dan aktif langsung setelah install</td>
+  </tr></table><h2 id="instalasi" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Instalasi</h2><ol style="margin:0 0 12px 0;padding-left:22px;line-height:1.9;"><li style="margin-bottom:8px;">Salin folder <code>custom_title_web</code> ke salah satu addons path instalasi Odoo 14 Anda.</li><li style="margin-bottom:8px;">Install dengan <code>odoo-bin -d &lt;db&gt; -i custom_title_web --stop-after-init</code>, atau dari Apps &rarr; Update Apps List &rarr; Install (modul tampil sebagai <strong>Web Window Title</strong>).</li><li style="margin-bottom:8px;">Tidak perlu restart — atur judul di Settings lalu reload halaman.</li></ol><h2 id="faq-id" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">FAQ</h2><p style="margin:0 0 14px 0;"><strong>Di mana pengaturannya?</strong><br />Settings &rarr; General Settings &rarr; seksi <strong>Window</strong> &rarr; field <strong>Title</strong>.</p><p style="margin:0 0 14px 0;"><strong>Apakah butuh restart server?</strong><br />Tidak — simpan pengaturan lalu reload halaman browser.</p><p style="margin:0 0 14px 0;"><strong>Apakah logo atau warnanya berubah?</strong><br />Tidak — modul hanya mengubah teks judul tab / halaman browser.</p><p style="margin:0 0 14px 0;"><strong>Apakah halaman login ikut berubah?</strong><br />Ya — judul halaman login memakai nilai <code>web.base.title</code> yang sama.</p><p style="margin:0 0 14px 0;"><strong>Bagaimana bila field Title dikosongkan?</strong><br />Judul default yang dipakai.</p><h2 id="tidak-ada-di-build" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Tidak Ada di Build Ini</h2><ul style="margin:0 0 12px 0;padding-left:22px;line-height:1.9;"><li style="margin-bottom:8px;">Hanya teks judul — tanpa perubahan logo, favicon, atau warna.</li><li style="margin-bottom:8px;">Satu judul per database, bukan per user dan bukan per aplikasi.</li><li style="margin-bottom:8px;">Modul tidak mengganti nama database atau perusahaan.</li></ul><h2 id="changelog-id" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Changelog</h2><ul style="margin:0 0 12px 0;padding-left:22px;line-height:1.9;"><li style="margin-bottom:8px;"><strong>14.0.1.2.1 — 24 Nov 2026</strong> &mdash; Deskripsi gaya baru bilingual (English default + Bahasa Indonesia) dengan navigasi tab samping dan screenshot testbed.</li></ul><h2 id="dukungan" style="font-size:26px;color:#1f2937;margin:36px 0 6px 0;border-left:6px solid #6D28D9;padding-left:12px;">Dukungan</h2><p style="margin:0 0 12px 0;">Author: <strong>Ahmad Ghozali</strong> &middot; Lisensi: LGPL-3.</p></div></div></div></div>
+</div>

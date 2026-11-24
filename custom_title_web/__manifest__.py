@@ -3,9 +3,19 @@
     'license': 'LGPL-3',
     'name': "Web Window Title",
     'summary': "The custom web window title",
+    'description': """
+Web Window Title
+================
+
+The custom web window title.
+
+Changelog
+---------
+14.0.1.2.1 (24 Nov 2026): deskripsi gaya baru bilingual (EN default + ID) + screenshot testbed.
+""",
     'author': 'Ahmad Ghozali',
     'category': 'Extra Tools',
-    'version': '14.0.1.2.0',
+    'version': '14.0.1.2.1',
     'depends': ['base_setup'],
     'demo': [
         'data/demo.xml',
